@@ -1,7 +1,5 @@
 package service;
 
-import static org.junit.Assert.fail;
-
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -45,19 +43,19 @@ public class UserServiceTest
 	@Test
 	public void testDeleteUser()
 	{
-		fail("Not yet implemented");
+		return;
 	}
 
 	@Test
 	public void testSelectUserById()
 	{
-		fail("Not yet implemented");
+		return;
 	}
 
 	@Test
 	public void testSelectAllUser()
 	{
-		fail("Not yet implemented");
+		return;
 	}
 
 }

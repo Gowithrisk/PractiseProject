@@ -4,10 +4,8 @@ import java.util.List;
 
 import Entity.UserBean;
 
-public interface IUserDaoMapper
-{
+public interface IUserDao {
 	/**
-	 * 新增用戶
 	 * 
 	 * @param user
 	 * @return
@@ -16,7 +14,6 @@ public interface IUserDaoMapper
 	public int insertUser(UserBean user) throws Exception;
 
 	/**
-	 * 修改用戶
 	 * 
 	 * @param user
 	 * @param id
@@ -26,7 +23,6 @@ public interface IUserDaoMapper
 	public int updateUser(UserBean user, int id) throws Exception;
 
 	/**
-	 * 刪除用戶
 	 * 
 	 * @param id
 	 * @return
@@ -35,7 +31,6 @@ public interface IUserDaoMapper
 	public int deleteUser(int id) throws Exception;
 
 	/**
-	 * 根据id查询用户信息
 	 * 
 	 * @param id
 	 * @return
@@ -44,7 +39,6 @@ public interface IUserDaoMapper
 	public UserBean selectUserById(int id) throws Exception;
 
 	/**
-	 * 查询所有的用户信息
 	 * 
 	 * @return
 	 * @throws Exception

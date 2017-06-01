@@ -8,12 +8,10 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 public class UserBean implements Serializable
 {
 	/**
-	 * 序列化
 	 */
 	private static final long serialVersionUID = 3631066985586997931L;
 
 	/**
-	 * 无参构造函数
 	 */
 	public UserBean()
 	{

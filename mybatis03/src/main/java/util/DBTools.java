@@ -16,7 +16,7 @@ public class DBTools
 		try
 		{
 			// 使用MyBatis提供的Resources类加载mybatis的配置文件
-			Reader reader = Resources.getResourceAsReader("mybatis_cfg.xml");
+			Reader reader = Resources.getResourceAsReader("mybatis.xml");
 			// 构建sqlSession的工厂
 			sessionFactory = new SqlSessionFactoryBuilder().build(reader);
 		}

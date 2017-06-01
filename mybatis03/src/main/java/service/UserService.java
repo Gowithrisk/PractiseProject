@@ -6,7 +6,7 @@ import org.apache.ibatis.session.SqlSession;
 import org.apache.log4j.Logger;
 
 import Entity.UserBean;
-import mapper.IUserDaoMapper;
+import mapper.IUserDao;
 import util.DBTools;
 
 public class UserService implements IUserSerivce
@@ -19,7 +19,7 @@ public class UserService implements IUserSerivce
 	public static boolean insertUser(UserBean user)
 	{
 		SqlSession session = DBTools.getSession();
-		IUserDaoMapper mapper = session.getMapper(IUserDaoMapper.class);
+		IUserDao mapper = session.getMapper(IUserDao.class);
 		try
 		{
 			int index = mapper.insertUser(user);
@@ -42,14 +42,11 @@ public class UserService implements IUserSerivce
 
 	/**
 	 * 删除用户
-	 * 
-	 * @param id
-	 *            用户ID
 	 */
 	public boolean deleteUser(int id)
 	{
 		SqlSession session = DBTools.getSession();
-		IUserDaoMapper mapper = session.getMapper(IUserDaoMapper.class);
+		IUserDao mapper = session.getMapper(IUserDao.class);
 		try
 		{
 			int index = mapper.deleteUser(id);
@@ -78,7 +75,7 @@ public class UserService implements IUserSerivce
 	public void selectUserById(int id)
 	{
 		SqlSession session = DBTools.getSession();
-		IUserDaoMapper mapper = session.getMapper(IUserDaoMapper.class);
+		IUserDao mapper = session.getMapper(IUserDao.class);
 		try
 		{
 			UserBean user = mapper.selectUserById(id);
@@ -102,7 +99,7 @@ public class UserService implements IUserSerivce
 	public void selectAllUser()
 	{
 		SqlSession session = DBTools.getSession();
-		IUserDaoMapper mapper = session.getMapper(IUserDaoMapper.class);
+		IUserDao mapper = session.getMapper(IUserDao.class);
 		try
 		{
 			List<UserBean> user = mapper.selectAllUser();
@@ -123,7 +120,7 @@ public class UserService implements IUserSerivce
 	public UserBean getUserbyName(String username) throws Exception
 	{
 		SqlSession session = DBTools.getSession();
-		IUserDaoMapper mapper = session.getMapper(IUserDaoMapper.class);
+		IUserDao mapper = session.getMapper(IUserDao.class);
 		UserBean user = null;
 		try
 		{
