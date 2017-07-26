@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<beans xmlns="http://www.springframework.org/schema/beans"  
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+       xsi:schemaLocation="http://www.springframework.org/schema/beans   
+           http://www.springframework.org/schema/beans/spring-beans.xsd">  
+             
+       <bean id="zus" class="bean.Zus" scope="singleton">
+            <property name="name" value="zus"></property>
+            <property name="speed" value="215"></property>
+            <property name="uniqueSkill" >
+                <list>
+                    <value>C</value>
+                    <value>G</value>
+                    <value>W</value>
+                </list>
+            </property>
+          
+          <property name="keySkill">
+           <map>
+                <entry key="C" value="闪电"></entry>
+                <entry key="G" value="G闪电"></entry>
+                <entry key="W" value="大招"></entry>
+           </map>
+          </property>    
+            
+       </bean>  
+</beans> 
