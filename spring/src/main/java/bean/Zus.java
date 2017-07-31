@@ -5,6 +5,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class Zus
 {
 	private String name;
@@ -16,6 +19,11 @@ public class Zus
 	private List<String> uniqueSkill = new ArrayList<String>();
 
 	private Map<String, String> keySkill = new HashMap<String, String>();
+
+	public void killingSpring()
+	{
+		System.out.println("killing Spring");
+	}
 
 	public String getName()
 	{
